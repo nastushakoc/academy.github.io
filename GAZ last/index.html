@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Академия IT</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div id="top" class="Yheader-background">
+                <div class="container">
+                    <div class="Yheader-logo-nav" id="one">
+                        <div class="Yheader-logo">
+                            <a href="index.html"><img src="./img/logo.svg" alt="logo"></a>
+                        </div>
+                        <div class="Yheader-nav">
+                            <ul>
+                                <li class="animation"><button class="autoreg" id="openAuto" @click.prevent="openAuto">Авторизация</button></li>
+                                <li class="animation"><button class="autoreg" id="openReg" @click.prevent="openReg">Регистрация</button></li>
+                                <li><button id="openMenu" @click="openMenu()"><img src="./img/burger.svg"></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Yheader-logo-nav menu-auto" id="two">
+                        <div class="Yheader-logo">
+                            <a href="index.html"><img src="./img/logo.svg" alt="logo"></a>
+                        </div>
+                        <div class="Yheader-nav">
+                            <ul>
+                                <li>{{this.regName}}</li>
+                                <li><button class="animation" onClick="window.location.reload();">Выйти</button></li>
+                                <li><button id="openMenu" @click="openMenu()"><img src="./img/burger.svg"></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Yheader-logo-nav-menu" id="burgerMenu">
+                        <div class="Yheader-nav-menu">
+                            <ul>
+                                <li class="animation"><a href="#znakomstvo">Знакомcтво с Академией IT</a></li>
+                                <li class="animation"><a href="#etapi">Этапы курса</a></li>
+                                <li class="animation"><a href="#ucheb">Учебные заведения</a></li>
+                                <li class="animation"><a href="#otzivi">Отзывы</a></li>
+                                <li class="animation"><a href="#partn">Партнеры</a></li>
+                                <li><button id="closeMenu" @click="closeMenu()"><img src="./img/close.svg"></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Yheader-main">
+                <div class="container">
+                    <div>
+                        <p class="Yheader-text">
+                            «Уверен, что совместными усилиями мы сможем вырастить настоящих профессионалов своего дела, которые станут драйверами внедрения прорывных технологий в российской промышленности.»
+                        </p>
+                        <p class="Yheader-text-podpis">Вадим Сорокин, президент «Группы ГАЗ»</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main> 
+            <div class="about-title title">
+                <div class="container">
+                    <h3 id="znakomstvo">
+                        ЗНАКОМСТВО С АКАДЕМИЕЙ IT
+                    </h3>
+                    <div class="title-line"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="about">
+                    <div class="about-info">
+                        <div class="about-info-block">
+                            <div class="block-text-left">
+                                <p>
+                                    Академия реализуется на базе корпоративного университета «Группы ГАЗ». Цель — обучение IT-специалистов с учетом перспективных задач автомобилестроения.
+                                </p>
+                            </div>
+                            <div class="block-picture">
+                                <img src="./img/pic-1.png" alt="Компьютер с графиками">
+                            </div>
+                        </div>
+                        <div class="about-info-block">
+                            <div class="block-picture">
+                                <img src="./img/pic-2.png" alt="Компьютер с кодом">
+                            </div>
+                            <div class="block-text-right">
+                                <p>
+                                    В обучении участвуют сертифицированные преподаватели из IT-отрасли, а также специалисты IT-подразделений компании и инженерного центра Горьковского автозавода.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-info-block">
+                            <div class="block-text-left">
+                                <p>
+                                    В академии обучаются 130 студентов, прошедших отбор. Обучение для студентов партнерских учебных заведений Нижегородской области является бесплатным. 
+                                </p>
+                            </div>
+                            <div class="block-picture">
+                                <img src="./img/pic-3.png" alt="Группа людей за компьютерами">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stages">
+                <div class="stages-title title">
+                    <div class="container">
+                        <h3 id="etapi">
+                            ЭТАПЫ КУРСА
+                        </h3>
+                        <div class="title-line"></div>
+                    </div>
+                </div>
+                <div class="stages-info">
+                    <div class="container">
+                        <div class="container1">
+                            <div class="stages-cards">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./img/book.png" alt="Книга">
+                                    </div>
+                                    <div class="card-title">
+                                        <p>
+                                            DeepDive
+                                        </p>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            погружение в разные IT направления: программирование, системное администрирование и т.п.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="arrow">
+                                    <img src="./img/arrow.png" alt="Стрелка">
+                                </div>
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./img/student.png" alt="Стажер">
+                                    </div>
+                                    <div class="card-title">
+                                        <p>
+                                            Intern
+                                        </p>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            формирование глубоких hard skills и получение практических навыков решения задач
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="arrow">
+                                    <img src="./img/arrow.png" alt="Стрелка">
+                                </div>
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./img/employee.png" alt="Младший сотрудник">
+                                    </div>
+                                    <div class="card-title">
+                                        <p>
+                                            Junior
+                                        </p>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            применение полученных знаний в реализации крупнейших проектов «Группы ГАЗ»!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stages-text">
+                                <p>
+                                    Принять участие в академии могут <span>студенты вузов</span>, а также <span>3-4 курсы и выпускники ссузов</span> технических специальностей.</br></br>
+                                    Вузы и ссузы, выступающие партнерами программы, <span>засчитывают обучение</span> их студентов в «Академии IT» <span>в свой учебный план</span>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="institution">
+                <div class="institution-title title">
+                    <div class="container">
+                        <h3 id="ucheb">
+                            УЧЕБНЫЕ ЗАВЕДЕНИЯ
+                        </h3>
+                        <div class="title-line"></div>
+                    </div>
+                </div>
+                <div class="institution-info">
+                    <div class="container">
+                        <div class="container1">
+                            <div class="institution-row">
+                                <div class="institution-block">
+                                    <div class="block-img">
+                                        <a href="https://www.nntu.ru/">
+                                            <img src="./img/нгту.png" alt="НГТУ">
+                                        </a>
+                                    </div>
+                                    <div class="block-text">
+                                        <p>
+                                            Нижегородский государственный технический университет им. Р.Е. Алексеева
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="institution-block">
+                                    <div class="block-img">
+                                        <a href="https://nnov.hse.ru/">
+                                            <img src="./img/вшэ.png" alt="ВШЭ">
+                                        </a>
+                                    </div>
+                                    <div class="block-text">
+                                        <p>
+                                            Национальный исследовательский университет «Высшая школа экономики» – Нижний Новгород
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="institution-block">
+                                    <div class="block-img">
+                                        <a href="http://www.unn.ru/">
+                                            <img src="./img/ннгу.png" alt="ННГУ">
+                                        </a>
+                                    </div>
+                                    <div class="block-text">
+                                        <p>
+                                            Национальный исследовательский Нижегородский государственный университет им. Н.И. Лобачевского
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="institution-row">
+                                <div class="institution-block">
+                                    <div class="block-img">
+                                        <a href="https://ngknn.ru/">
+                                            <img src="./img/нгк.png" alt="НГК">
+                                        </a>
+                                    </div>
+                                    <div class="block-text">
+                                        <p>
+                                            Нижегородский Губернский колледж
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="institution-block">
+                                    <div class="block-img">
+                                        <a href="https://www.xn--80aybw.xn--p1ai/">
+                                            <img src="./img/намт.png" alt="НАМТ">
+                                        </a>
+                                    </div>
+                                    <div class="block-text">
+                                        <p>
+                                            Нижегородский автомеханический техникум
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="institution-block">
+                                    <div class="block-img">
+                                        <a href="https://ngieu.ru/">
+                                            <img src="./img/княгин.png" alt="НГИЭУ">
+                                        </a>
+                                    </div>
+                                    <div class="block-text">
+                                        <p>
+                                            Нижегородский государственный инженерно-экономический университет
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments">
+                <div class="comm-title">
+                    <div class="container title">
+                        <div class="cocomm">
+                            <h3 id="otzivi" class="comments-title">Отзывы</h1>
+                            <div class="title-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="comments-container">
+                        <div>
+                            <div class="comments-main" v-for="comm in comments" v-if="comments.length!==0">
+                                <div class="comments-open-part">
+                                    <p class="comment-name">{{comm.username}} </p>
+                                    <p class="comment-rate"> Оценка: {{comm.rate}} из 5</p>
+                                    <p class="comment-status"> {{comm.status}} обучение в Академии IT</p>
+                                </div>
+                                <div class="comments-close-part">
+                                    <p class="comment">Комментарий: {{comm.comment}}</p>
+                                </div>
+        
+                                <button @click="open" id="see" class="comments-open-button">Подробнее</button>
+                                <!-- <button @click="close" class="comments-close-button">Скрыть</button> -->
+                            </div>
+                            <div >
+                                <h4 class="comment-new" :hidden="podskazka">Вы можете оставить свой отзыв после авторизации</h4>
+                            </div>
+                            <div class="add-cooment">
+                                <button class="add-but" :hidden="hiddenAdd" @click="openModalAdd">Добавить
+                                    отзыв</button>
+                                <dialog :open="openAdd" class="dialog-comment">
+                                    <div>
+                                        <div class="closeForm">
+                                            <button @click="closeModalAdd"><img src="./img/closeblack.svg"></button>
+                                        </div>
+                                        <div class="dialog-comm-title">
+                                            <div class="title-form">
+                                                <p class="form-title">Добавить отзыв</h1>
+                                                    <div class="title-line"></div>
+                                            </div>
+                                        </div>
+                                        <form>
+                                            <div class="fibut">
+                                                <div class="field">
+                                                    <input type="text" placeholder="Введите имя пользователя:" v-model="username">
+                                                    <input type="number" min="1" max="5"
+                                                        placeholder="Выберите оценку: " v-model="rate">
+                                                    <div class="dialog-comm-rovn">
+                                                        <input type="radio" name="bill" id="study" value="Проходит"
+                                                            v-model="status">
+                                                        <label for="study">Прохожу обучение</label>
+                                                    </div>
+                                                    <div class="dialog-comm-rovn">
+                                                        <input type="radio" name="bill" id="notstudy" value="Проходил(а)"
+                                                            v-model="status">
+                                                        <label for="notstudy">Проходил(а) обучение</label>
+                                                    </div>
+                                                    <input type="textarea" placeholder="Введите комментарий:" class="dialog-comment-main" v-model="comment">
+
+
+                                                </div>
+                                                <div class="but-but">
+                                                    <button class="form-but"
+                                                        @click.prevent="addComment" :disabled="!username || !rate || !status || !comment">Добавить</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </dialog>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form" id="formm">
+                    <div class="authorization">
+                        <div>
+                            <div class="closeForm">
+                                <button @click="closeAuto()"><img src="./img/closeblack.svg"></button>
+                            </div>
+                            <div class="title">
+                                <div class="title-form">
+                                    <p class="form-title">Авторизация</h1>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="fibut">
+                                    <div class="field">
+                                        <input type="text" placeholder="Имя" v-model="regName">
+                                        <input type="text" placeholder="Пароль" v-model="password">
+                                    </div>
+                                    <div class="but-but">
+                                        <button @click.prevent="auto" class="form-but">Войти</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="form" id="formReg">
+                    <div class="registration">
+                        <div>
+                            <div class="closeForm">
+                                <button @click="closeReg()"><img src="./img/closeblack.svg"></button>
+                            </div>
+                            <div class="title">
+                                <div class="title-form">
+                                    <p class="form-title">Регистрация</h1>
+                                    <div class="title-line"></div>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="fibut fireg">
+                                    <div class="field">
+                                        <input type="text" placeholder="Введите имя пользователя" v-on:blur="checkName" v-model="regName">
+                                        <div v-if="errorVisibleName" class="error">Имя пользователя введено некорректно</div>
+                                        <input type="text" placeholder="Введите пароль" v-model="password">
+                                        <input type="text" placeholder="Введите email" v-on:blur="checkEmail" v-model="email">
+                                        <div v-if="errorVisibleEmail" class="error">Электронная почта введена некорректно</div>
+                                    </div>
+                                    <div class="directions">
+                                        <h2>Направления обучения:</h2>
+                                        <div class="directions-radio">
+                                            <div class="radio">
+                                                <input type="radio" name="direction" id="a" value="Программист" v-model="regStatus">
+                                                <label for="a">Программист</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="direction" id="b" value="Администратор" v-model="regStatus">
+                                                <label for="b">Администратор</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="direction" id="c" value="Не обучаюсь" v-model="regStatus">
+                                                <label for="c">Не обучаюсь</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="but-but">
+                                        <button class="form-but" @click.prevent="reg" :disabled="!regName || !email || !password">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners">
+                <div class="comm-title">
+                    <div class="container title">
+                        <div class="cocomm">
+                            <h3 id="partn" class="comments-title">Партнеры</h1>
+                            <div class="title-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="partners-container">
+                        <div class="partners-logo">
+                            <div class="photo1"><img src="img/1c.svg" alt=""></div>
+                            <div class="photo2"><img src="img/rdtex.png" alt=""></div>
+                            <div class="photo3"><img src="img/it.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="container2">
+                    <div class="footer-align">
+                        <div class="footer-links">
+                            <div class="foo">
+                                <div class="footer-linksite">
+                                    <a href="#znakomstvo" class="footer-link">Знакомство с Академией IT</a>
+                                    <a href="#etapi" class="footer-link">Этапы курса</a>
+                                    <a href="#ucheb" class="footer-link">Учебные заведения</a>
+                                </div>
+                                <div class="footer-linksite">
+                                    <a href="#otzivi" class="footer-link">Отзывы</a>
+                                    <a href="#partn" class="footer-link">Партнеры</a>
+                                </div>
+                            </div>
+                            <div class="footer-networks">
+                                <div class="footer-img">
+                                    <img src="./img/telegram.png" alt="">
+                                    <img src="./img/vk.png" alt="">
+                                    <img src="./img/twitter.png" alt="">
+                                    <img src="./img/youtube.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-company">
+                <div class="container">
+                    <div class="container2">
+                        <p class="footer-comp">Ⓒ 2022 GAZ Group</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="popup-background" id="popupbackground"></div>
+        <div class="arrow-top"><a href="#top"><img src="./img/arrow.svg"></a></div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+</html>
